@@ -8,10 +8,7 @@ import br.com.unip.algoritmos.QuickSort;
 
 public class Dados {
 	
-	public String pal;
-	
-	int posicao;
-	
+
 
 	public static String[] gerarArray() {
 		
