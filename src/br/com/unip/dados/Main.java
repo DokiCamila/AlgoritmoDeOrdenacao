@@ -21,21 +21,21 @@ public class Main {
         int opcao = Integer.parseInt(in.nextLine()); 
         
         if (opcao == 1 ) {
-        	int[] vetorTeste= Dados.gerarArray();
+        	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	BubbleSort.start(vetorTeste);
     		long tempoFinal = System.currentTimeMillis();
     		System.out.println(" BubbleSort executado em = " + (tempoFinal - tempoInicial) + " ms");
         	
         }else if (opcao == 2) {
-        	int[] vetorTeste= Dados.gerarArray();
+        	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	InsertionSort.start(vetorTeste);
     		long tempoFinal = System.currentTimeMillis();
     		System.out.println(" InsertionSort executado em = " + (tempoFinal - tempoInicial) + " ms");
         	
         }else if (opcao == 3) {
-        	int[] vetorTeste= Dados.gerarArray();
+        	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	QuickSort.start(vetorTeste,0, vetorTeste.length - 1);
     		long tempoFinal = System.currentTimeMillis();

@@ -3,20 +3,22 @@ package br.com.unip.algoritmos;
 public class BubbleSort {
 
 
-	public static void start(int vetor[]) {
-		boolean troca = true;
-		int aux;
-		while (troca) {
-			troca = false;
-			for (int i = 0; i < vetor.length - 1; i++) {
-				if (vetor[i] > vetor[i + 1]) {
-					aux = vetor[i];
-					vetor[i] = vetor[i + 1];
-					vetor[i + 1] = aux;
-					troca = true;
+	public static void start(String vetor[]) {
+		System.out.println("Iniciando método BubbleSort");
+		
+		String temp;
+		
+			for (int j= 0; j < vetor.length; j++) {
+				for (int i = j + 1; i < vetor.length; i++ ) {
+					if (vetor[i].compareTo(vetor[j]) < 0 ) {
+						temp = vetor[j];
+						vetor[j] = vetor[i];
+						vetor[i] = temp;
+					}
 				}
+				System.out.println(vetor[j]);
 			}
-		}
+		
 	}
 
 	

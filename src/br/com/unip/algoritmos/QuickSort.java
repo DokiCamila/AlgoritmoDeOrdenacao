@@ -3,33 +3,37 @@ package br.com.unip.algoritmos;
 public class QuickSort {
 	
 	
-	public static void start(final int[] vetor, final int inicio, final int fim) {
+	public static void start(String[] vetor,  int inicio,  int fim) {
+		
 		if (inicio < fim) {
 			int posicaoPivo = separar(vetor, inicio, fim);
-			start(vetor, inicio, posicaoPivo - 1);
+			start(vetor, inicio, posicaoPivo);
 			start(vetor, posicaoPivo + 1, fim);
 		}
 	}
 
-	private static int separar(int[] vetor, int inicio, int fim) {
-		int pivo = vetor[inicio];
-		int i = inicio + 1, f = fim;
-		while (i <= f) {
-			if (vetor[i] <= pivo)
-				i++;
-			else if (pivo < vetor[f])
-				f--;
-			else {
-				int troca = vetor[i];
-				vetor[i] = vetor[f];
-				vetor[f] = troca;
-				i++;
-				f--;
+	private static int separar(String[] vetor, int inicio, int fim) {
+		String pivo = vetor[inicio];
+		int i = inicio;
+		int f = fim;
+		while (true) {
+				while(vetor[f].compareTo(pivo) >= 0 && i < f) {
+					f--;
+				}
+				while(vetor[i].compareTo(pivo) < 0 && i < f) {
+					i++;
+				}
+				if (i < f) {
+					String st = vetor[i];
+					vetor[i] = vetor[f];
+					vetor[f] = st;
+					
+				}else {
+					System.out.println(vetor[f]);
+					return f;
+				}
 			}
-		}
-		vetor[inicio] = vetor[f];
-		vetor[f] = pivo;
-		return f;
+	
 	}
 
 	
