@@ -1,15 +1,20 @@
 package br.com.unip.algoritmos;
 
+import java.util.Arrays;
+
 public class QuickSort {
 	
 	
 	public static void start(String[] vetor,  int inicio,  int fim) {
+		
+		
 		
 		if (inicio < fim) {
 			int posicaoPivo = separar(vetor, inicio, fim);
 			start(vetor, inicio, posicaoPivo);
 			start(vetor, posicaoPivo + 1, fim);
 		}
+		System.out.println(Arrays.toString(vetor));
 	}
 
 	private static int separar(String[] vetor, int inicio, int fim) {
@@ -29,7 +34,7 @@ public class QuickSort {
 					vetor[f] = st;
 					
 				}else {
-					System.out.println(vetor[f]);
+					        
 					return f;
 				}
 			}

@@ -4,7 +4,7 @@ public class BubbleSort {
 
 
 	public static void start(String vetor[]) {
-		System.out.println("Iniciando método BubbleSort");
+		
 		
 		String temp;
 		

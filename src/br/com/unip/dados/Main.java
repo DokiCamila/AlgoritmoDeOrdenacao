@@ -21,6 +21,8 @@ public class Main {
         int opcao = Integer.parseInt(in.nextLine()); 
         
         if (opcao == 1 ) {
+        	System.out.println("Iniciando método BubbleSort");
+        	System.out.println("------------------------------------------------------------------");
         	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	BubbleSort.start(vetorTeste);
@@ -28,6 +30,8 @@ public class Main {
     		System.out.println(" BubbleSort executado em = " + (tempoFinal - tempoInicial) + " ms");
         	
         }else if (opcao == 2) {
+        	System.out.println("Iniciando método InsertionSort");
+        	System.out.println("------------------------------------------------------------------");
         	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	InsertionSort.start(vetorTeste);
@@ -35,6 +39,8 @@ public class Main {
     		System.out.println(" InsertionSort executado em = " + (tempoFinal - tempoInicial) + " ms");
         	
         }else if (opcao == 3) {
+        	System.out.print("Inicando método QuickSort");
+        	System.out.println("------------------------------------------------------------------");
         	String[] vetorTeste= Dados.gerarArray();
         	long tempoInicial = System.currentTimeMillis();
         	QuickSort.start(vetorTeste,0, vetorTeste.length - 1);

@@ -6,8 +6,7 @@ public class InsertionSort {
 
 	
 	public static void start(String[] vetor) {
-		System.out.println("Iniciando método InsertionSort");
-		
+	
 		int i,j;
 		String chave;
 		
